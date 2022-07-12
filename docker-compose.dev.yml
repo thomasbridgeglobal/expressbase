@@ -7,3 +7,11 @@ services:
     environment:
       - NODE_ENV=development
     command: npm run dev
+
+  adminer:
+      image: dockette/adminer:mysql
+      restart: always
+      ports:
+          - 8080:80
+      networks:
+          - expressnet
